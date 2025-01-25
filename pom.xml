@@ -29,6 +29,8 @@
   </scm>
   <properties>
     <java.version>21</java.version>
+    <zipkin-reporter.version>3.4.2</zipkin-reporter.version>
+    <brave.version>6.0.0</brave.version>
   </properties>
   <dependencies>
     <dependency>
@@ -40,6 +42,24 @@
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-test</artifactId>
       <scope>test</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>io.zipkin.reporter2</groupId>
+      <artifactId>zipkin-sender-okhttp3</artifactId>
+      <version>${zipkin-reporter.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>io.zipkin.reporter2</groupId>
+      <artifactId>zipkin-reporter-brave</artifactId>
+      <version>${zipkin-reporter.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>io.zipkin.brave</groupId>
+      <artifactId>brave</artifactId>
+      <version>${brave.version}</version>
     </dependency>
   </dependencies>
 
